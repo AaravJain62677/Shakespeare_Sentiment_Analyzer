@@ -15,7 +15,6 @@ The pipeline follows 6 classical NLP steps:
 5. **Sentiment Scoring** — Each lemma+POS pair is looked up in **SentiWordNet**, a lexical resource that assigns `pos_score` and `neg_score` to words. The sentiment score for each word is `pos_score - neg_score`, averaged across all synsets. The final passage score is the average across all tokens.
 6. **Classification** — Score `> 0.05` → **POSITIVE**, Score `< -0.05` → **NEGATIVE**, otherwise → **NEUTRAL**
 
-> No ML models. No external APIs. Pure classical NLP.
 
 ---
 
